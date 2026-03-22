@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-[#ffffff] text-zinc-900 transition-colors duration-300 antialiased selection:bg-zinc-200 selection:text-black;
+}
+
+.dark body {
+  @apply bg-[#09090b] text-zinc-100 selection:bg-zinc-800 selection:text-white;
+}
+
+@utility clean-card {
+  @apply bg-zinc-50/50 dark:bg-[#121214] border border-zinc-200 dark:border-zinc-800/80 rounded-2xl hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors duration-300;
+}
